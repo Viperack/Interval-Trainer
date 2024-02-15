@@ -1,11 +1,10 @@
-package com.example.intervaltrainer.presentation
+package com.example.intervaltrainer.app
 
 import kotlin.math.roundToLong
 
-class Util {
+class DisplayTime {
     companion object {
-        fun displayTimeString(milliSeconds: Long): String {
-            val partialSeconds = (milliSeconds % 1000 /* Second */)
+        fun formatMilliSecondsToString(milliSeconds: Int): String {
             val seconds = ((milliSeconds % (60 * 1000) /* Minute */) / 1000.0).roundToLong()
             val minutes = (milliSeconds/ (1000.0 * 60)).toLong()
 
